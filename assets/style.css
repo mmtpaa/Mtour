@@ -1,0 +1,89 @@
+:root{
+  --bg:#07080c;
+  --panel:#0c0f17;
+  --panel2:#0a0d14;
+  --line:rgba(255,255,255,.10);
+  --text:#f5f5f6;
+  --muted:#b6bcc8;
+  --muted2:#8c93a3;
+  --accent:#c6a75e;
+  --accent2:#8c6d2e;
+  --shadow: 0 18px 60px rgba(0,0,0,.55);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(198,167,94,.18), transparent 55%),
+    radial-gradient(900px 500px at 80% 25%, rgba(99,102,241,.10), transparent 60%),
+    var(--bg);
+  color:var(--text);
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:24px}
+.topbar{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter: blur(10px);
+  background: rgba(7,8,12,.65);
+  border-bottom:1px solid var(--line);
+}
+.nav{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;gap:16px;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;min-width:260px}
+.mark{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#f2e6c7);box-shadow:0 14px 36px rgba(198,167,94,.18)}
+.brand strong{display:block;font-size:14px;letter-spacing:.6px;text-transform:uppercase}
+.brand span{display:block;font-size:12px;color:var(--muted2);margin-top:2px}
+.menu{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.menu a{color:var(--muted);font-size:13px;padding:10px 10px;border-radius:12px;border:1px solid transparent}
+.menu a:hover{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--text)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 14px;border-radius:14px;
+  border:1px solid rgba(198,167,94,.35);
+  background:rgba(198,167,94,.10);
+  font-weight:800;font-size:13px;
+  box-shadow:0 10px 30px rgba(198,167,94,.10);
+}
+.btn:hover{background:rgba(198,167,94,.14)}
+.card{
+  background: linear-gradient(180deg, rgba(12,15,23,.90), rgba(10,13,20,.92));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.section{padding:28px 0 0}
+.sectionHead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:18px 0 12px}
+.sectionHead h2{margin:0;font-size:22px}
+.sectionHead p{margin:0;color:var(--muted2);font-size:13px;max-width:60ch}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:900px){.grid3{grid-template-columns:1fr}}
+.feature{padding:18px}
+.badge{display:inline-flex;gap:8px;font-size:12px;color:rgba(198,167,94,.95);letter-spacing:.6px;text-transform:uppercase}
+.feature h3{margin:10px 0 8px;font-size:16px}
+.feature p{margin:0;color:var(--muted);line-height:1.7;font-size:14px}
+.footer{
+  margin-top:32px;border-top:1px solid var(--line);
+  padding:18px 0 10px;color:var(--muted2);font-size:13px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.footer a{border-bottom:1px dashed rgba(255,255,255,.25)}
+/* Hero */
+.hero{padding:42px 0 18px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+@media (max-width:940px){.hero{grid-template-columns:1fr}}
+.heroLeft{padding:28px;position:relative;overflow:hidden}
+.glow{position:absolute;inset:-120px -120px auto auto;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(198,167,94,.22), transparent 60%);
+}
+.kicker{color:var(--muted2);font-size:12px;letter-spacing:.6px;text-transform:uppercase}
+h1{margin:12px 0 12px;font-size:44px;line-height:1.08;letter-spacing:-.6px;font-weight:900}
+@media (max-width:520px){h1{font-size:34px}}
+.lead{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.7;max-width:58ch}
+.heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.btnPrimary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:0;padding:12px 16px;border-radius:14px;font-weight:900;font-size:14px;box-shadow:0 18px 45px rgba(198,167,94,.16)}
+.btnGhost{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-weight:800;font-size:14px}
+.heroRight{padding:18px;display:grid;gap:12px}
+.mini{padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.mini .t{color:var(--muted2);font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+.mini .v{margin-top:6px;font-weight:900}
+.mini .v a{border-bottom:1px dashed rgba(198,167,94,.45)}
